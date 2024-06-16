@@ -7,11 +7,13 @@ You can access the Character Editor in 2 ways:
 > The debug keys are binded to **7** and **8** in your keypad by default, for Debug Key 1 and Debug Key 2 respectively.<br>
 > You may change this in the Options menu if necessary, under Controls.
 
-(image of the debug menu)
+![image](https://github.com/inky03/psych-wiki/assets/156634467/ad777f86-da3a-473f-ae75-a5782a54bb04)
+
 
 # The Character Editor
 
-(image of the character editor)
+![image](https://github.com/inky03/psych-wiki/assets/156634467/f13500b0-11b0-4774-8c14-c9072abf0949)
+
 
 Welcome to the Character Editor! Pay attention to the interface:
 - The list of animations of the character, with their respective [offsets](#animation-offsets) are listed at the top left.
