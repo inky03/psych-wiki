@@ -171,7 +171,7 @@ The default animation names for a character are as follows:
 - **singRIGHTmiss**: Right note pose (note missed)
 - **hey**: Used on the Hey! event (ex. as seen in Bopeebo)
 - **cheer**: Used on the Hey! event (Speaker only)
-- **fear**: Used when lightning strikes (ex. as seen in Week 2)
+- **scared**: Used when lightning strikes (ex. as seen in Week 2)
 
 The default animation names for a Game Over character are as follows:
 - **firstDeath**: This animation plays at the start of the Game Over screen
