@@ -76,7 +76,7 @@ Changes the current icon of your character. Your icon must be located in **"imag
 ### Get Icon Color
 Gets the dominant color of the current icon and sets the healthbar color to match.
 ### Vocals File Postfix
-Allows to load a vocals file for this character with a postfix[^1] when inside a song (**"Vocals.ogg"** > **"Vocals-postfix.ogg"**).<br>
+Allows to load a vocals file for this character with a postfix[^1] when inside a song (**"Voices.ogg"** > **"Voices-postfix.ogg"**).<br>
 ### Character X/Y
 > [!TIP]
 > Make sure your character is aligned with the silhouette of the side you're previewing!
@@ -132,7 +132,7 @@ You can do this by inputting the frame numbers of your animation separated by a 
 
 > [!TIP]
 > - Press F1 to see the full list of controls in the Character Editor.<br>
-> - You can use the [animation ghost]() on your idle animation as a position reference!
+> - You can use the [animation ghost](#ghost-tab) on your idle animation as a position reference!
 
 Once you've added all of your animations, try pressing W or S to switch through them.
 
