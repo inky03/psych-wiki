@@ -3,17 +3,15 @@ You can access the Character Editor in 2 ways:
 1. Press **Debug Key 1** in the main menu. This will open the Debug Menu, where you may then select the Character Editor.
 2. Press **Debug Key 2** in a song. This will immediately load the Character Editor on the opponent side's character.
 
-> [!NOTE]
+> [!IMPORTANT]
 > The debug keys are binded to **7** and **8** in your keypad by default, for Debug Key 1 and Debug Key 2 respectively.<br>
-> You may change this in the Options menu if necessary, under Controls.
+> You may change this in the Options menu if necessary, under Debug in the Controls category.
 
-![image](https://github.com/inky03/psych-wiki/assets/156634467/ad777f86-da3a-473f-ae75-a5782a54bb04)
-
+<img src="../../img/creating-a-mod/debugmenu.png" width="600" alt="Debug menu">
 
 # The Character Editor
 
-![image](https://github.com/inky03/psych-wiki/assets/156634467/f13500b0-11b0-4774-8c14-c9072abf0949)
-
+<img src="../../img/creating-a-mod/chareditor-full.png" width="600" alt="Character Editor full view">
 
 Welcome to the Character Editor! Pay attention to the interface:
 - The list of animations of the character, with their respective [offsets](#animation-offsets) are listed at the top left.
@@ -36,6 +34,8 @@ Loads a simple character template with only the idle and note pose animations.
 Use this tickbox to preview the character in each side. If unticked, the character will be previewed from the opponent side, otherwise it will be previewed from the player side.
 
 ## Ghost tab
+<img src="../../img/creating-a-mod/chareditor-ghost.png" width="300" alt="Animation ghost">
+
 An animation ghost is a copy of your character that you may use as a position reference when [offsetting animations](#animation-offsets).
 ### Make Ghost
 > [!NOTE]
@@ -64,9 +64,15 @@ This will be the path to your character spritesheet, beginning from the images f
   then you would input `characters/textureAtlas` .
 
 ### Reload Image
-After setting the **image file name**, press this button to load the spritesheet. If your character hasn't appeared after pressing the button, your path may be set up incorrectly.
+After setting the **image file name**, press this button to load the spritesheet.<br>
+If everything is done correctly, your character should now appear in place of the previous one!<br>
+
+<img src="../../img/creating-a-mod/chareditor-success.png" width="300" alt="Example of a custom character">
+
+You may notice the "**No Animation Found**" error; dont worry about this just yet! Keep on reading...
+
 ### Health icon name
-Changes the current icon of your character. Your icon must be located in **"images/icons/icon-ICONNAME.png"**, where **ICONNAME** is what must be input in the box.
+Changes the current icon of your character. Your icon must be located in **"images/icons/icon-ICONNAME.png"**, where "**ICONNAME**" is what must be input in the box.
 ### Get Icon Color
 Gets the dominant color of the current icon and sets the healthbar color to match.
 ### Vocals File Postfix
@@ -82,7 +88,7 @@ If ticked, the character will be flipped horizontally (make sure it's facing lef
 ### No Antialiasing
 If unticked, the character will have a rough, more "pixelled" appearance. It's recommended to use this if you're working with pixel sprites.
 ### Scale
-Changes the scale of your character. 1 is the default size (100%).
+You can use this to adjust the scale of your character. 1 is the default size (100%).
 ### Health bar R/G/B
 Here are three inputs to change the healthbar color by its red, green and blue color values.
 ### Sing Animation length
@@ -93,7 +99,7 @@ Saves the character to a file.
 ## Animations tab
 > [!TIP]
 > All default animation names used in Psych Engine are listed in [Default Animation List](#default-animation-list).<br>
-> You're free to add more animations, but keep in mind they must be [scripted]().
+> You're free to add more animations than the defaults, but they can only show up in-game with [events]() or [scripts]()!
 
 In this tab you can add or edit the animations that will be played on your character in-game.<br>
 Start by opening the data file used on your character's spritesheet (this must be a XML or JSON file).
@@ -113,23 +119,26 @@ Repeat this process for each animation you want to add to your character file!
 > [!NOTE]
 > The frame numbers start at **0**. This means frame 0 is the first frame of your animation.
 
+> [!TIP]
+> You can speed up this process by adding the animation without indices first, then using the A and D keys to change the current frame of the selected animation!
+
 This is an advanced feature in animations that allows them to be played in a certain sequence.<br>
 You can do this by inputting the frame numbers of your animation separated by a comma; for example, putting **0,2,4** in this field will only play frames 1, 3 and 5 in your animation.
 
 ### Animation Offsets
-> [!TIP]
-> - Press F1 to see the full list of controls in the Character Editor.<br>
-> - You can use the [animation ghost]() on your idle animation as a position reference!
-
 > [!WARNING]
 > Keep in mind that due to quirks with Flip X, your animation offsets may look wrong on one side.<br>
 > Make sure you're previewing the character in the desired side when changing these offsets.
 
-Once you've added all of your animations, try pressing W or S to cycle through them.
+> [!TIP]
+> - Press F1 to see the full list of controls in the Character Editor.<br>
+> - You can use the [animation ghost]() on your idle animation as a position reference!
 
-(image of bad offsets here)
+Once you've added all of your animations, try pressing W or S to switch through them.
 
-You may immediately notice the animations aren't aligned with each other!<br>
+<img src="../../img/creating-a-mod/chareditor-offset.png" width="300" alt="Bad animation offsets. Notice the misaligned feet.">
+
+As you cycle through, you may notice the animations aren't aligned correctly!<br>
 That's what animation offsets are for; this will allow you to align your animations so they are in the correct positions.
 
 1. Press W or S again to cycle and select the animation you want to change.
@@ -160,7 +169,7 @@ Characters can load the following formats:
 The default animation names for a character are as follows:
 > [!NOTE]
 > The "danceLeft" and "danceRight" animations are used for Girlfriend and the Spooky Kids' sprites.
-- **idle**: Idle pose
+- **idle**: Idle pose (Bop)
 - **danceLeft**: Idle pose (swaying left)
 - **danceRight**: Idle pose (swaying right)
 - **singLEFT**: Left note pose
@@ -176,10 +185,10 @@ The default animation names for a character are as follows:
 - **scared**: Used when lightning strikes (ex. as seen in Week 2)
 
 The default animation names for a Game Over character are as follows:
-- **firstDeath**: This animation plays at the start of the Game Over screen
+- **firstDeath**: This animation plays at the start of the Game Over screen.
 - **deathLoop**: This animation plays during the music loop in the Game Over screen.<br>
   The animation must loop to display correctly.
-- **deathConfirm**: This animation plays when you retry in the Game Over screen
+- **deathConfirm**: This animation plays when you retry in the Game Over screen.
 
 [^1]: **Postfix**: to add or append at the end of something: suffix. (Definition from the [Collins English Dictionary](https://www.collinsdictionary.com/dictionary/english/postfix))
 [^2]: Adobe Flash exports the Sparrow format encoded in UTF-16; this is unsupported and will cause the game to crash. Change the XML encoding to UTF-8 first.
