@@ -28,7 +28,7 @@ Here's an example JSON for a stage:
 > [!NOTE]
 > For the purposes of softcoded mods, `directory` is entirely useless.
 
-Lets explain what everything does!
+Let's see what this all means:
 
 ### defaultZoom
 **Decimal value.** This is the default camera zoom on the stage! A value of 1 is equal to 100% zoom.
@@ -83,7 +83,7 @@ Boolean (true/false) value. If set to true, the Girlfriend character will be **h
 > There's an upcoming Stage Editor in the **1.0 update** for Psych Engine! As such, this section should only really apply in 0.7.3 and lower versions. Scripts, however, also have other useful applications.
 
 > [!NOTE]
-> The examples used here focus on **Lua** scripts, but [HScript]() can also be used to make stages!
+> The examples used here focus on **Lua** scripts, but [HScript](../hscript/introduction.md) can also be used to make stages!
 
 If you've done everything correctly and tested your new stage, you may have noticed something:
 
@@ -115,7 +115,7 @@ Let's quickly explain what this all does:
 As it name describes, makes the sprite.
 - The **first** argument is a tag; it's basically a nickname so we can access our sprite later! This can have anything, as long as its a [string]().
 - The **second** argument is the path to our sprite. This is relative to the "images" folder in your mod, and excludes the filetype (which should be always PNG).<br>
-  For example, since our image is within `images/stage/stageBack.png`, we put `"stage/stageBack"` here.
+  For example, since our image is within `images/stage/stageback.png`, we put `"stage/stageback"` here.
 - The **third** argument is the **X position** of our sprite within the world.
 - Similarly, the **fourth** argument is the **Y position** of our sprite.
 
