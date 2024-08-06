@@ -7,7 +7,7 @@ As such, this scripting language is widely used in a large number of application
 
 Lua scripts in Psych Engine allow you to run custom code without having to compile the game, which makes the process of modding the game super easy with just the right amount of knowledge!
 
-## Where do I use Lua scripts?
+## Where can I use Lua scripts?
 
 > [!IMPORTANT]
 > Lua scripts can be pretty powerful, but they can only run inside **songs**. This means you can't edit menus or states outside of the play state; this must be done by modding the source code.
@@ -57,4 +57,4 @@ The name of the script must match that of the name of your character inside the 
 This kind of scripts will only run if the current song is set in the stage.<br>
 The name of the script must match that of the name of your stage inside the folder.
 
-[Creating a custom stage]()
+[Creating a custom stage](../creating-a-mod/creating-a-custom-stage.md)

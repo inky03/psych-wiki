@@ -35,7 +35,7 @@ someVariable = 32 -- assigns the previously declared local variable "someVariabl
 
 ### Local Variables
 > [!TIP]
-> Prefer using *local* variables over *global* whenever possbile, as local variables are faster to access and avoid clutter.
+> Prefer using *local* variables over *global* whenever possible, as local variables are faster to access and avoid clutter.
 
 Local variables are kinds of variables which have their scope limited to the block they're declared on. This may be the body of a function or a chunk, which refers to the whole code run by the script.<br>
 These variables must be declared with the keyword `local`, preceding the variable name.
