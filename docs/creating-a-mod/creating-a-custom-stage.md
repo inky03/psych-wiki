@@ -86,6 +86,7 @@ Boolean (true/false) value. If set to true, the Girlfriend character will be **h
 > The examples used here focus on **Lua** scripts, but [HScript]() can also be used to make stages!
 
 If you've done everything correctly and tested your new stage, you may have noticed something:
+
 <img src="../../img/creating-a-mod/creatingstage-void.png" width="600" alt="Empty stage">
 
 It's completely empty!<br>
@@ -131,6 +132,7 @@ This simply adds the sprite to the game, so it can show up!
 - The **second** argument dictates if the sprite should be *in front* (`true`) or *behind* (`false`) of the characters. This argument defaults to `false`, and as such can be omitted if not necessary.
 
 We have now created our first stage sprite! If you restart the song, you'll be able to see the changes we've done so far. It should look something like this:
+
 <img src="../../img/creating-a-mod/creatingstage-firstsprite.png" width="600" alt="Our first stage sprite">
 
 Let's finish creating the rest of the stage:
@@ -151,6 +153,7 @@ function onCreatePost()
 end
 ```
 As you can see, we've applied the same functions, just using different values! Now our stage looks like this:
+
 <img src="../../img/creating-a-mod/creatingstage-complete.png" width="600" alt="Our complete stage">
 
-Now we have a fully functional stage! If you want to learn more, and do more advanced things, refer to the [Lua Script API](../lua/psych-api/index.md)!
+Now we have a fully functional stage! If you want to learn more and do more advanced things, refer to the [Lua Script API](../lua/psych-api/index.md)!
