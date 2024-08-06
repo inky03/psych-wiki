@@ -93,16 +93,16 @@ No worries; this is just because we haven't added the assets themselves. This is
 The following stage script example will be a simple recreation of the **Week 1 stage**. I've dropped the stage's assets from `assets/week1/images/` to `myMod/images/stage/` in this example.
 
 Begin by creating an empty LUA file, with the same name as your stage JSON (for example, `myStage.lua`).<br>
-Now, add the `onCreate` [callback]() to your script! This is the callback that runs when the script is initialized, so we can add the sprites. It should look something like this:
+Now, add the `onCreatePost` [callback]() to your script! This is the callback that runs when the game is fully initialized, so we can add the sprites. It should look something like this:
 ```lua
-function onCreate()
+function onCreatePost()
 	-- this is where we create the stage assets!
 end
 ```
 
 Now lets add a sprite to the game; we can do this with the `makeLuaSprite` and `addLuaSprite` functions.
 ```lua
-function onCreate()
+function onCreatePost()
 	makeLuaSprite('stageback', 'stage/stageback', -600, -200)
 	setScrollFactor('stageback', 0.9, 0.9)
 	addLuaSprite('stageback', false)
@@ -135,7 +135,7 @@ We have now created our first stage sprite! If you restart the song, you'll be a
 
 Let's finish creating the rest of the stage:
 ```lua
-function onCreate()
+function onCreatePost()
 	makeLuaSprite('stageback', 'stage/stageback', -600, -200)
 	setScrollFactor('stageback', 0.9, 0.9)
 	addLuaSprite('stageback', false)
